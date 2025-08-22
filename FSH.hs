@@ -1,15 +1,15 @@
 -- Esta es la funcion que le suma 1 a un numero
-incrementar :: Int -> Int
-incrementar n = n + 1
+sucesor :: Int -> Int
+sucesor n = n + 1
 
 -- Esta es la que le resta 1 a un numero
 predecesor :: Int -> Int
 predecesor n = n - 1
 
--- Esta es la funcion que suma dos numeros haciendo uso del incrementar y predecesor
+-- Esta es la funcion que suma dos numeros haciendo uso del sucesor y predecesor
 sumar :: Int -> Int -> Int
 sumar a 0 = a
-sumar a b = sumar (incrementar a) (predecesor b)
+sumar a b = sumar (sucesor a) (predecesor b)
 
 -- Esta es la funcion que resta b de a haciendo uso del predecesor
 restar :: Int -> Int -> Int
@@ -39,4 +39,5 @@ main = do {
   print (mult 9 2);
   putStrLn "Division de 28 / 7:";
   print (div 28 7)
+
 }
